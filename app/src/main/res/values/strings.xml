@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AdminstracionClientes</string>
+    <string name="title_lista">Lista</string>
+    <string name="title_agregar">Agregar</string>
+    <string name="title_eliminar">Eliminar</string>
+    <string name="title_editar">Editar</string>
+</resources>

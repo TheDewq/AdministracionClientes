@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_lista">
+
+    <fragment
+        android:id="@+id/navigation_lista"
+        android:name="com.example.adminstracionclientes.ui.lista.listaFragment"
+        android:label="@string/title_lista"
+        tools:layout="@layout/fragment_lista" />
+
+    <fragment
+        android:id="@+id/navigation_agregar"
+        android:name="com.example.adminstracionclientes.ui.agregar.agregarFragment"
+        android:label="@string/title_agregar"
+        tools:layout="@layout/fragment_agregar"/>
+    <fragment
+        android:id="@+id/navigation_editar"
+        android:name="com.example.adminstracionclientes.ui.editar.editarFragment"
+        android:label="@string/title_editar"
+        tools:layout="@layout/fragment_editar" />
+    <fragment
+        android:id="@+id/navigation_eliminar"
+        android:name="com.example.adminstracionclientes.ui.eliminar.eliminarFragment"
+        android:label="@string/title_eliminar"
+        tools:layout="@layout/fragment_eliminar" />
+
+
+</navigation>

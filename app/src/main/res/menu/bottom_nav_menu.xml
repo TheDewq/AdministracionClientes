@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_lista"
+        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:title="@string/title_lista" />
+
+    <item
+        android:id="@+id/navigation_agregar"
+        android:icon="@android:drawable/ic_menu_upload_you_tube"
+        android:title="@string/title_agregar" />
+
+    <item
+        android:id="@+id/navigation_editar"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="@string/title_editar" />
+    <item
+        android:id="@+id/navigation_eliminar"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="@string/title_eliminar" />
+
+</menu>
