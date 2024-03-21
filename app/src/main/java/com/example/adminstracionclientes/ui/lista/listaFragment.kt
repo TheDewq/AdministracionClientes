@@ -1,31 +1,49 @@
 package com.example.adminstracionclientes.ui.lista
 
-import androidx.fragment.app.viewModels
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.adminstracionclientes.R
+import com.example.adminstracionclientes.databinding.FragmentListaBinding
 
 class listaFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = listaFragment()
-    }
+    private var _binding: FragmentListaBinding? = null
 
-    private val viewModel: ListaViewModel by viewModels()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        // TODO: Use the ViewModel
-    }
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_lista, container, false)
+        val notificationsViewModel =
+            ViewModelProvider(this).get(ListaViewModel::class.java)
+
+        _binding = FragmentListaBinding.inflate(inflater, container, false)
+        val root: View = binding.root
+        val btn:Button = root.findViewById(R.id.btn1)
+        val txt:TextView = root.findViewById(R.id.txt1)
+        txt.text = "nfojseoifjesof"
+
+        btn.setOnClickListener(){
+            Toast.makeText(root.context, "si sirve", Toast.LENGTH_LONG)
+            txt.text = "aja"
+        }
+
+        return root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
